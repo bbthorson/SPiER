@@ -33,5 +33,34 @@ The following table dictates how fields from the `Stanley_Brown_FHIR_Questionnai
     *   If an active Safety Plan *does* exist, update the existing `CarePlan` with the new strings (or create a new version of the resource).
 5.  **Persistence:** Store the `CarePlan` for long-term retrieval and cross-network sharing.
 
+### Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant P as Patient/Clinician
+    participant E as EHR System
+    participant B as Backend Service
+    participant C as FHIR Repository
+
+    P->>E: Completes Stanley Brown Questionnaire
+    E->>B: Submits Questionnaire data
+    B->>C: Creates QuestionnaireResponse resource
+    
+    B->>C: Queries for active Stanley Brown CarePlan
+    C-->>B: Returns existing CarePlan or None
+    
+    Note over B: Executes Mapping Logic<br/>(Extracts Text, Formats Arrays)
+    
+    alt Active CarePlan Exists
+        B->>C: Updates existing CarePlan.activity descriptions
+    else No Active CarePlan
+        B->>B: Clones Hybrid_CarePlan.json template
+        B->>C: Creates new CarePlan resource
+    end
+    
+    C-->>E: Acknowledges CarePlan save
+    E-->>P: Displays saved Safety Plan
+```
+
 ---
 *Created: 2026-02-23*

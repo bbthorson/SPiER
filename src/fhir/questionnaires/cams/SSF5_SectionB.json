@@ -1,0 +1,153 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "cams-ssf5-section-b",
+  "url": "http://your-organization.org/Questionnaire/CAMS-SSF5-SectionB",
+  "version": "1.0.0",
+  "name": "SSF5_SectionB",
+  "title": "CAMS Suicide Status Form (SSF-5) - Section B (Clinician Risk Assessment)",
+  "status": "draft",
+  "subjectType": [ "Patient" ],
+  "date": "2026-02-04",
+  "publisher": "SPiER Project",
+  "item": [
+    {
+      "linkId": "risk-assessment",
+      "text": "Section B: Clinician Risk Assessment",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "ideation",
+          "text": "Suicide Ideation",
+          "type": "group",
+          "item": [
+            { "linkId": "ideation-present", "text": "Present?", "type": "boolean" },
+            { "linkId": "ideation-desc", "text": "Describe:", "type": "string" },
+            { "linkId": "ideation-freq", "text": "Frequency:", "type": "string" },
+            { "linkId": "ideation-dur", "text": "Duration:", "type": "string" }
+          ]
+        },
+        {
+          "linkId": "plan",
+          "text": "Suicide Plan",
+          "type": "group",
+          "item": [
+            { "linkId": "plan-present", "text": "Present?", "type": "boolean" },
+            { "linkId": "plan-when", "text": "When:", "type": "string" },
+            { "linkId": "plan-where", "text": "Where:", "type": "string" },
+            { "linkId": "plan-how", "text": "How:", "type": "string" },
+            { 
+              "linkId": "plan-access", 
+              "text": "Access to Means?", 
+              "type": "choice",
+              "answerOption": [
+                { "valueString": "Yes" }, { "valueString": "No" }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "preparation",
+          "text": "Suicide Preparation",
+          "type": "group",
+          "item": [
+            { "linkId": "prep-present", "text": "Present?", "type": "boolean" },
+            { "linkId": "prep-desc", "text": "Describe:", "type": "string" }
+          ]
+        },
+        {
+          "linkId": "history",
+          "text": "History of Suicidal Behaviors",
+          "type": "group",
+          "item": [
+            { 
+              "linkId": "history-type", 
+              "text": "Type", 
+              "type": "choice",
+              "answerOption": [
+                { "valueString": "Single Attempt" },
+                { "valueString": "Multiple Attempts" },
+                { "valueString": "None" }
+              ]
+            },
+            { "linkId": "history-desc", "text": "Describe:", "type": "string" }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "risk-factors",
+      "text": "Risk Factors (Check all that apply and describe)",
+      "type": "group",
+      "item": [
+        { "linkId": "rf-impulsivity", "text": "Impulsivity", "type": "boolean" },
+        { "linkId": "rf-substance", "text": "Substance Abuse", "type": "boolean" },
+        { "linkId": "rf-loss", "text": "Significant Loss", "type": "boolean" },
+        { "linkId": "rf-relationship", "text": "Relationship Problems", "type": "boolean" },
+        { "linkId": "rf-burden", "text": "Burden to Others", "type": "boolean" },
+        { "linkId": "rf-health", "text": "Health/Pain Problems", "type": "boolean" },
+        { "linkId": "rf-sleep", "text": "Sleep Problems", "type": "boolean" },
+        { "linkId": "rf-legal", "text": "Legal/Financial Issues", "type": "boolean" },
+        { "linkId": "rf-shame", "text": "Shame", "type": "boolean" }
+      ]
+    },
+    {
+      "linkId": "drivers",
+      "text": "Identification of Suicidal Drivers (Problems)",
+      "description": "Identify the top problems that are driving the suicidality. These will be tracked in future sessions.",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "driver-1",
+          "text": "Problem #1 (The 'Primary Driver')",
+          "type": "group",
+          "item": [
+            { "linkId": "driver-1-desc", "text": "Description:", "type": "string" },
+            { 
+              "linkId": "driver-1-type", 
+              "text": "Type:", 
+              "type": "choice",
+              "answerOption": [
+                { "valueCoding": { "system": "http://cams-care.com/driver-type", "code": "direct", "display": "Direct Driver" } },
+                { "valueCoding": { "system": "http://cams-care.com/driver-type", "code": "indirect", "display": "Indirect Driver" } }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "driver-2",
+          "text": "Problem #2",
+          "type": "group",
+          "item": [
+            { "linkId": "driver-2-desc", "text": "Description:", "type": "string" },
+             { 
+              "linkId": "driver-2-type", 
+              "text": "Type:", 
+              "type": "choice",
+              "answerOption": [
+                { "valueCoding": { "system": "http://cams-care.com/driver-type", "code": "direct", "display": "Direct Driver" } },
+                { "valueCoding": { "system": "http://cams-care.com/driver-type", "code": "indirect", "display": "Indirect Driver" } }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "driver-3",
+          "text": "Problem #3",
+          "type": "group",
+          "item": [
+            { "linkId": "driver-3-desc", "text": "Description:", "type": "string" },
+             { 
+              "linkId": "driver-3-type", 
+              "text": "Type:", 
+              "type": "choice",
+              "answerOption": [
+                { "valueCoding": { "system": "http://cams-care.com/driver-type", "code": "direct", "display": "Direct Driver" } },
+                { "valueCoding": { "system": "http://cams-care.com/driver-type", "code": "indirect", "display": "Indirect Driver" } }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

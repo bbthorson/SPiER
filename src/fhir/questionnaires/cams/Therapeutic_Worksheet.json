@@ -1,0 +1,91 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "cams-therapeutic-worksheet",
+  "url": "http://your-organization.org/Questionnaire/CAMS-Therapeutic-Worksheet",
+  "version": "1.0.0",
+  "name": "CAMS_Therapeutic_Worksheet",
+  "title": "CAMS Therapeutic Worksheet: Understanding Your Suicidality",
+  "status": "draft",
+  "subjectType": [ "Patient" ],
+  "date": "2026-02-04",
+  "publisher": "SPiER Project",
+  "description": "Used in interim sessions to explore the Drivers identified in the initial SSF Assessment.",
+  "item": [
+    {
+      "linkId": "personal-story",
+      "text": "I. Personal Story of Suicidality",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "story-narrative",
+          "text": "How do you understand your relationship to suicide? What is your personal story as it relates to suicide?",
+          "type": "text",
+          "repeats": false
+        }
+      ]
+    },
+    {
+      "linkId": "drivers-exploration",
+      "text": "II. Drivers of Suicidality",
+      "description": "Now let us examine the factors underlying your suicidality (Drivers).",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "direct-drivers-analysis",
+          "text": "Analysis of Direct Drivers (Problem #2)",
+          "type": "group",
+          "item": [
+            { "linkId": "dd-thoughts", "text": "Specific thoughts (e.g., 'It would be easier on everyone if I were dead'):", "type": "string" },
+            { "linkId": "dd-feelings", "text": "Specific feelings (e.g., 'I just feel so much shame'):", "type": "string" },
+            { "linkId": "dd-behaviors", "text": "Specific behaviors (e.g., 'When I waste time all day long'):", "type": "string" },
+            { "linkId": "dd-themes", "text": "Specific themes (e.g., patterns in relationships or self-concept):", "type": "string" }
+          ]
+        },
+        {
+          "linkId": "indirect-drivers-analysis",
+          "text": "Analysis of Indirect Drivers (Problem #3)",
+          "description": "Underlying factors that contribute but do not necessarily lead to acute suicidal ideation (e.g., substance abuse, PTSD).",
+          "type": "group",
+          "item": [
+            { "linkId": "id-desc", "text": "Describe the indirect drivers:", "type": "string" }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "crisis-model",
+      "text": "III. My Suicide Crisis Working Model",
+      "description": "Mapping what increases vs decreases risk at each stage.",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "stage-indirect",
+          "text": "Stage 1: Indirect Drivers",
+          "type": "group",
+          "item": [
+            { "linkId": "si-increase", "text": "What increases risk?", "type": "string" },
+            { "linkId": "si-decrease", "text": "What decreases risk? (Stabilization Plan)", "type": "string" }
+          ]
+        },
+        {
+          "linkId": "stage-direct",
+          "text": "Stage 2: Direct Drivers",
+          "type": "group",
+          "item": [
+            { "linkId": "sd-increase", "text": "What increases risk?", "type": "string" },
+            { "linkId": "sd-decrease", "text": "What decreases risk? (Stabilization Plan)", "type": "string" }
+          ]
+        },
+        {
+          "linkId": "stage-suicide-option",
+          "text": "Stage 3: Suicide as an Option ('I should kill myself')",
+          "type": "group",
+          "item": [
+            { "linkId": "so-increase", "text": "What increases risk?", "type": "string" },
+            { "linkId": "so-decrease", "text": "What decreases risk? (Stabilization Plan)", "type": "string" }
+          ]
+        }
+      ]
+    }
+  ]
+}

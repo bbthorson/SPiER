@@ -1,0 +1,235 @@
+{
+  "resourceType": "Questionnaire",
+  "url": "http://your-organization.org/Questionnaire/StanleyBrownSafetyPlan",
+  "version": "1.1.0",
+  "name": "StanleyBrownSafetyPlan",
+  "title": "Stanley-Brown Safety Plan",
+  "status": "active",
+  "subjectType": [
+    "Patient"
+  ],
+  "date": "2026-02-04",
+  "publisher": "SPiER Project",
+  "description": "Digital translation of the Stanley-Brown Safety Plan. Includes Step 7: One thing worth living for.",
+  "copyright": "The Stanley-Brown Safety Plan is copyrighted by Barbara Stanley, PhD & Gregory K. Brown, PhD (2008, 2021). Individual use of the Stanley-Brown Safety Plan form is permitted. Written permission from the authors is required for any changes to this form or use of this form in the electronic medical record. Additional resources are available from www.suicidesafetyplan.com.",
+  "item": [
+    {
+      "linkId": "step-1-warning-signs",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "76689-1",
+          "display": "Self-reported crisis warning signs"
+        }
+      ],
+      "text": "STEP 1: WARNING SIGNS (Thoughts, Images, Mood, Behavior)",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "1-1-warning-sign",
+          "text": "List personal warning signs that a crisis may be developing (3 or more recommended):",
+          "type": "string",
+          "repeats": true,
+          "maxLength": 100,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "step-2-internal-coping",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "76690-9",
+          "display": "Self-reported distraction strategies to take mind off problems"
+        }
+      ],
+      "text": "STEP 2: INTERNAL COPING STRATEGIES (Things I can do to take my mind off my problems without contacting another person)",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "2-1-coping-strategy",
+          "text": "List specific distracting strategies the individual can do on their own (3 or more recommended):",
+          "type": "string",
+          "repeats": true,
+          "maxLength": 100,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "step-3-distraction-contacts",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "76691-7",
+          "display": "Self-reported people and social settings that provide distraction"
+        }
+      ],
+      "text": "STEP 3: PEOPLE AND SOCIAL SETTINGS THAT PROVIDE DISTRACTION",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "3-1-distraction-contact-group",
+          "text": "Person/Place for Distraction (List at least 2 people and 2 social settings)",
+          "type": "group",
+          "repeats": true,
+          "item": [
+            {
+              "linkId": "3-1-name-place",
+              "text": "Name or Place:",
+              "type": "string"
+            },
+            {
+              "linkId": "3-2-contact-info",
+              "text": "Contact Info (Phone, Address, etc.):",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "step-4-crisis-support",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "76692-5",
+          "display": "Self-reported people whom I can ask for help during a crisis"
+        }
+      ],
+      "text": "STEP 4: PEOPLE WHOM I CAN ASK FOR HELP DURING A CRISIS",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "4-1-support-person-group",
+          "text": "Person (List at least 3)",
+          "type": "group",
+          "repeats": true,
+          "item": [
+            {
+              "linkId": "4-1-name",
+              "text": "Name:",
+              "type": "string"
+            },
+            {
+              "linkId": "4-2-contact-info",
+              "text": "Contact Info (Phone):",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "step-5-professionals",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "76693-3",
+          "display": "Self-reported professionals or professional services I can contact during a crisis"
+        }
+      ],
+      "text": "STEP 5: PROFESSIONALS OR PROFESSIONAL SERVICES I CAN CONTACT DURING A CRISIS",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "5-1-clinician-agency-group",
+          "text": "Clinician/Agency Contact",
+          "type": "group",
+          "repeats": true,
+          "item": [
+            {
+              "linkId": "5-1-name",
+              "text": "Clinician/Agency Name:",
+              "type": "string"
+            },
+            {
+              "linkId": "5-2-contact-info",
+              "text": "Emergency Contact/Phone:",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "linkId": "5-3-emergency-dept",
+          "text": "Local Emergency Department:",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "5-3-name",
+              "text": "Name:",
+              "type": "string"
+            },
+            {
+              "linkId": "5-4-address",
+              "text": "Address:",
+              "type": "string"
+            },
+            {
+              "linkId": "5-5-phone",
+              "text": "Phone:",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "linkId": "5-6-lifeline",
+          "text": "Crisis Line Phone (e.g., 988)",
+          "type": "display"
+        }
+      ]
+    },
+    {
+      "linkId": "step-6-lethal-means",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "76694-1",
+          "display": "Self-reported plan for lethal means safety"
+        }
+      ],
+      "text": "STEP 6: MAKING THE ENVIRONMENT SAFER (PLAN FOR LETHAL MEANS SAFETY)",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "6-1-safety-action",
+          "text": "Describe the action plan(s) that will be taken to reduce access to lethal means (2 or more recommended):",
+          "type": "string",
+          "repeats": true,
+          "maxLength": 100
+        }
+      ]
+    },
+    {
+      "linkId": "step-7-reason-for-living",
+      "code": [
+        {
+          "system": "http://loinc.org",
+          "code": "81344-4",
+          "display": "Reasons for living"
+        }
+      ],
+      "text": "STEP 7: THE ONE THING THAT IS MOST IMPORTANT TO ME AND WORTH LIVING FOR:",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "7-1-worth-living",
+          "text": "Description:",
+          "type": "string",
+          "maxLength": 200
+        }
+      ]
+    }
+  ]
+}

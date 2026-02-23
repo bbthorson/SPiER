@@ -1,0 +1,87 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "cams-stabilization-plan",
+  "url": "http://your-organization.org/Questionnaire/CAMS-Stabilization-Plan",
+  "version": "1.0.0",
+  "name": "CAMS_Stabilization_Plan",
+  "title": "CAMS Stabilization Plan",
+  "status": "draft",
+  "subjectType": [ "Patient" ],
+  "date": "2026-02-04",
+  "publisher": "SPiER Project",
+  "item": [
+    {
+      "linkId": "lethal-means",
+      "text": "Ways to reduce access to lethal means:",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "lethal-means-list",
+          "text": "Steps to reduce access:",
+          "type": "string",
+          "repeats": true,
+          "extension": [
+            { "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs", "valueInteger": 3 }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "coping-strategies",
+      "text": "Things I can do to cope differently when I am in a suicide crisis:",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "coping-list",
+          "text": "Coping strategies:",
+          "type": "string",
+          "repeats": true,
+          "extension": [
+            { "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs", "valueInteger": 5 }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "emergency-contact",
+      "text": "Life or death emergency contact number:",
+      "type": "string"
+    },
+    {
+      "linkId": "support-people",
+      "text": "People I can call for help or to decrease my isolation:",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "support-list",
+          "text": "Contact Name/Number:",
+          "type": "string",
+          "repeats": true,
+          "extension": [
+            { "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs", "valueInteger": 3 }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "treatment-adherence",
+      "text": "Attending treatment as scheduled:",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "barrier-solution-group",
+          "text": "Potential Barrier and Solutions",
+          "type": "group",
+          "repeats": true,
+          "item": [
+            { "linkId": "barrier", "text": "Potential Barrier:", "type": "string" },
+            { "linkId": "solution", "text": "Solutions I will try:", "type": "string" }
+          ],
+          "extension": [
+            { "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs", "valueInteger": 2 }
+          ]
+        }
+      ]
+    }
+  ]
+}

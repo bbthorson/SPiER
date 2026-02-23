@@ -1,0 +1,93 @@
+{
+  "resourceType": "CarePlan",
+  "id": "cams-stabilization-careplan-example",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/ecareplan/StructureDefinition/us-ecareplan"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>CAMS Stabilization Plan</h3><p><b>Goal:</b> Safety and Stability</p></div>"
+  },
+  "status": "active",
+  "intent": "plan",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "735324008",
+          "display": "Treatment plan for suicide prevention"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Example Patient"
+  },
+  "created": "2026-02-04",
+  "goal": [
+    {
+      "display": "Achieve Safety and Stability (CAMS Primary Goal)"
+    }
+  ],
+  "activity": [
+    {
+      "detail": {
+        "code": {
+          "text": "Reduction of Lethal Means"
+        },
+        "status": "in-progress",
+        "description": "[Lethal Means List from Questionnaire]: e.g., 'Gun removed from home', 'Medication locked in safe'.",
+        "doNotPerform": false
+      }
+    },
+    {
+      "detail": {
+        "code": {
+          "text": "Coping Strategies"
+        },
+        "status": "in-progress",
+        "description": "[Coping List from Questionnaire]: e.g., 'Walk the dog', 'Listen to music'.",
+        "doNotPerform": false
+      }
+    },
+    {
+      "detail": {
+        "code": {
+          "text": "Support Network"
+        },
+        "status": "in-progress",
+        "description": "[Support People List]: e.g., 'Call Mom at 555-0199'.",
+        "doNotPerform": false
+      }
+    },
+    {
+      "detail": {
+        "code": {
+          "text": "Emergency Contact"
+        },
+        "status": "in-progress",
+        "description": "Life or death emergency contact: [Emergency Contact Name/Number].",
+        "doNotPerform": false
+      }
+    },
+    {
+      "detail": {
+        "code": {
+          "text": "Treatment Attendance Plan"
+        },
+        "status": "in-progress",
+        "description": "Barrier: [Barrier Text]. Solution: [Solution Text].",
+        "doNotPerform": false
+      }
+    }
+  ],
+  "note": [
+    {
+      "text": "This CarePlan represents the 'CAMS Stabilization Plan'. It should be reviewed and updated at the start of every CAMS session."
+    }
+  ]
+}

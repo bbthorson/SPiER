@@ -1,0 +1,87 @@
+{
+  "resourceType": "CarePlan",
+  "id": "stanley-brown-safety-plan-hybrid-example",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/ecareplan/StructureDefinition/us-ecareplan"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns="http://www.w3.org/1999/xhtml"><h3>Stanley-Brown Safety Plan</h3><p><b>Step 1: Warning Signs:</b> [Embedded text here]</p></div>"
+  },
+  "status": "active",
+  "intent": "plan",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "735324008",
+          "display": "Treatment plan for suicide prevention"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/example",
+    "display": "Example Patient"
+  },
+  "addresses": [
+    {
+      "display": "Risk for suicide"
+    }
+  ],
+  "supportingInfo": [
+    {
+      "display": "QuestionnaireResponse/stanley-brown-example-response"
+    }
+  ],
+  "activity": [
+    {
+      "detail": {
+        "code": {
+          "coding": [ { "system": "http://loinc.org", "code": "76689-1" } ],
+          "text": "Step 1: Warning Signs"
+        },
+        "status": "in-progress",
+        "description": "Patient identified warning signs: [Placeholder for extracted text from Step 1]. This field ensures the plan is readable without following external links."
+      }
+    },
+    {
+      "detail": {
+        "code": {
+          "coding": [ { "system": "http://loinc.org", "code": "76690-9" } ],
+          "text": "Step 2: Internal Coping Strategies"
+        },
+        "status": "in-progress",
+        "description": "Patient identified coping strategies: [Placeholder for extracted text from Step 2]."
+      }
+    },
+    {
+      "detail": {
+        "code": {
+          "coding": [ { "system": "http://loinc.org", "code": "76692-5" } ],
+          "text": "Step 4: Crisis Support Contacts"
+        },
+        "status": "in-progress",
+        "description": "Primary Contacts: [Name/Phone]. Having these in the CarePlan activity ensures emergency access."
+      }
+    },
+    {
+      "detail": {
+        "code": {
+          "coding": [ { "system": "http://loinc.org", "code": "76694-1" } ],
+          "text": "Step 6: Lethal Means Safety"
+        },
+        "status": "in-progress",
+        "description": "Lethal means plan: [Placeholder for extracted text from Step 6]."
+      }
+    }
+  ],
+  "note": [
+    {
+      "text": "This CarePlan uses a Hybrid model. Core safety data is duplicated from the QuestionnaireResponse into the activity.description fields for maximum interoperability across systems that may not support full resource extraction."
+    }
+  ]
+}

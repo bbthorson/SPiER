@@ -1,0 +1,246 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "cams-ssf5-section-a",
+  "url": "http://your-organization.org/Questionnaire/CAMS-SSF5-SectionA",
+  "version": "1.0.0",
+  "name": "SSF5_SectionA",
+  "title": "CAMS Suicide Status Form (SSF-5) - Section A (Patient)",
+  "status": "draft",
+  "subjectType": [ "Patient" ],
+  "date": "2026-02-04",
+  "publisher": "SPiER Project",
+  "item": [
+    {
+      "linkId": "core-ratings",
+      "text": "Rate and fill out each item according to how you feel right now. Then rank in order of importance 1 to 5.",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "1-psychological-pain",
+          "text": "1) RATE PSYCHOLOGICAL PAIN (hurt, anguish, or misery in your mind, not stress, not physical pain):",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "1-score",
+              "text": "Rating (1=Low pain, 5=High pain)",
+              "type": "integer",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [ { "system": "http://hl7.org/fhir/questionnaire-item-control", "code": "slider" } ]
+                  }
+                },
+                { "url": "http://hl7.org/fhir/StructureDefinition/minValue", "valueInteger": 1 },
+                { "url": "http://hl7.org/fhir/StructureDefinition/maxValue", "valueInteger": 5 }
+              ]
+            },
+            {
+              "linkId": "1-text",
+              "text": "What I find most painful is:",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "linkId": "2-stress",
+          "text": "2) RATE STRESS (your general feeling of being pressured or overwhelmed):",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "2-score",
+              "text": "Rating (1=Low stress, 5=High stress)",
+              "type": "integer",
+              "extension": [
+                { "url": "http://hl7.org/fhir/StructureDefinition/minValue", "valueInteger": 1 },
+                { "url": "http://hl7.org/fhir/StructureDefinition/maxValue", "valueInteger": 5 }
+              ]
+            },
+            {
+              "linkId": "2-text",
+              "text": "What I find most stressful is:",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "linkId": "3-agitation",
+          "text": "3) RATE AGITATION (emotional urgency; feeling that you need to take action; not irritation; not annoyance):",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "3-score",
+              "text": "Rating (1=Low agitation, 5=High agitation)",
+              "type": "integer",
+              "extension": [
+                { "url": "http://hl7.org/fhir/StructureDefinition/minValue", "valueInteger": 1 },
+                { "url": "http://hl7.org/fhir/StructureDefinition/maxValue", "valueInteger": 5 }
+              ]
+            },
+            {
+              "linkId": "3-text",
+              "text": "I most need to take action when:",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "linkId": "4-hopelessness",
+          "text": "4) RATE HOPELESSNESS (your expectation that things will not get better no matter what you do):",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "4-score",
+              "text": "Rating (1=Low hopelessness, 5=High hopelessness)",
+              "type": "integer",
+              "extension": [
+                { "url": "http://hl7.org/fhir/StructureDefinition/minValue", "valueInteger": 1 },
+                { "url": "http://hl7.org/fhir/StructureDefinition/maxValue", "valueInteger": 5 }
+              ]
+            },
+            {
+              "linkId": "4-text",
+              "text": "I am most hopeless about:",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "linkId": "5-self-hate",
+          "text": "5) RATE SELF-HATE (your general feeling of disliking yourself; having no self-esteem; having no self-respect):",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "5-score",
+              "text": "Rating (1=Low self-hate, 5=High self-hate)",
+              "type": "integer",
+              "extension": [
+                { "url": "http://hl7.org/fhir/StructureDefinition/minValue", "valueInteger": 1 },
+                { "url": "http://hl7.org/fhir/StructureDefinition/maxValue", "valueInteger": 5 }
+              ]
+            },
+            {
+              "linkId": "5-text",
+              "text": "What I hate most about myself is:",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "linkId": "6-overall-risk",
+          "text": "6) RATE OVERALL RISK OF SUICIDE:",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "6-score",
+              "text": "Rating (1=Extremely low risk/will not kill self, 5=Extremely high risk/will kill self)",
+              "type": "integer",
+              "extension": [
+                { "url": "http://hl7.org/fhir/StructureDefinition/minValue", "valueInteger": 1 },
+                { "url": "http://hl7.org/fhir/StructureDefinition/maxValue", "valueInteger": 5 }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "relational-drivers",
+      "text": "Self vs. Others",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "relational-self",
+          "text": "1) How much is being suicidal related to thoughts and feelings about YOURSELF? (1=Not at all, 5=Completely)",
+          "type": "integer",
+          "extension": [
+            { "url": "http://hl7.org/fhir/StructureDefinition/minValue", "valueInteger": 1 },
+            { "url": "http://hl7.org/fhir/StructureDefinition/maxValue", "valueInteger": 5 }
+          ]
+        },
+        {
+          "linkId": "relational-others",
+          "text": "2) How much is being suicidal related to thoughts and feelings about OTHERS? (1=Not at all, 5=Completely)",
+          "type": "integer",
+          "extension": [
+            { "url": "http://hl7.org/fhir/StructureDefinition/minValue", "valueInteger": 1 },
+            { "url": "http://hl7.org/fhir/StructureDefinition/maxValue", "valueInteger": 5 }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "reasons-living-dying",
+      "text": "Reasons for Living vs. Reasons for Dying",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "reasons-living",
+          "text": "Reasons for Living (Rank 1-5)",
+          "type": "group",
+          "repeats": true,
+          "item": [
+            {
+              "linkId": "living-rank",
+              "text": "Rank",
+              "type": "integer"
+            },
+            {
+              "linkId": "living-desc",
+              "text": "Reason",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "linkId": "reasons-dying",
+          "text": "Reasons for Dying (Rank 1-5)",
+          "type": "group",
+          "repeats": true,
+          "item": [
+            {
+              "linkId": "dying-rank",
+              "text": "Rank",
+              "type": "integer"
+            },
+            {
+              "linkId": "dying-desc",
+              "text": "Reason",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "wish-to-live-die",
+      "text": "Wish to Live/Die",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "wish-live",
+          "text": "I wish to live to the following extent (0=Not at all, 8=Very much)",
+          "type": "integer",
+          "extension": [
+            { "url": "http://hl7.org/fhir/StructureDefinition/minValue", "valueInteger": 0 },
+            { "url": "http://hl7.org/fhir/StructureDefinition/maxValue", "valueInteger": 8 }
+          ]
+        },
+        {
+          "linkId": "wish-die",
+          "text": "I wish to die to the following extent (0=Not at all, 8=Very much)",
+          "type": "integer",
+          "extension": [
+            { "url": "http://hl7.org/fhir/StructureDefinition/minValue", "valueInteger": 0 },
+            { "url": "http://hl7.org/fhir/StructureDefinition/maxValue", "valueInteger": 8 }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "one-thing",
+      "text": "The one thing that would help me no longer feel suicidal would be:",
+      "type": "string"
+    }
+  ]
+}

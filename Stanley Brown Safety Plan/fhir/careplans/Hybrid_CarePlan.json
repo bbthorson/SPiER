@@ -8,7 +8,7 @@
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns="http://www.w3.org/1999/xhtml"><h3>Stanley-Brown Safety Plan</h3><p><b>Step 1: Warning Signs:</b> [Embedded text here]</p></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h3>Stanley-Brown Safety Plan</h3><p><b>Step 1: Warning Signs:</b> [Embedded text here]</p></div>"
   },
   "status": "active",
   "intent": "plan",
@@ -41,7 +41,12 @@
     {
       "detail": {
         "code": {
-          "coding": [ { "system": "http://loinc.org", "code": "76689-1" } ],
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "76689-1"
+            }
+          ],
           "text": "Step 1: Warning Signs"
         },
         "status": "in-progress",
@@ -51,7 +56,12 @@
     {
       "detail": {
         "code": {
-          "coding": [ { "system": "http://loinc.org", "code": "76690-9" } ],
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "76690-9"
+            }
+          ],
           "text": "Step 2: Internal Coping Strategies"
         },
         "status": "in-progress",
@@ -61,7 +71,27 @@
     {
       "detail": {
         "code": {
-          "coding": [ { "system": "http://loinc.org", "code": "76692-5" } ],
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "76691-7"
+            }
+          ],
+          "text": "Step 3: Social Distractions"
+        },
+        "status": "in-progress",
+        "description": "Places or people that provide distraction: [Placeholder for extracted text from Step 3]."
+      }
+    },
+    {
+      "detail": {
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "76692-5"
+            }
+          ],
           "text": "Step 4: Crisis Support Contacts"
         },
         "status": "in-progress",
@@ -71,11 +101,46 @@
     {
       "detail": {
         "code": {
-          "coding": [ { "system": "http://loinc.org", "code": "76694-1" } ],
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "76693-3"
+            }
+          ],
+          "text": "Step 5: Professional Support"
+        },
+        "status": "in-progress",
+        "description": "Clinicians and Agencies: [Placeholder for extracted text from Step 5]."
+      }
+    },
+    {
+      "detail": {
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "76694-1"
+            }
+          ],
           "text": "Step 6: Lethal Means Safety"
         },
         "status": "in-progress",
         "description": "Lethal means plan: [Placeholder for extracted text from Step 6]."
+      }
+    },
+    {
+      "detail": {
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "81344-4"
+            }
+          ],
+          "text": "Step 7: Reason for Living"
+        },
+        "status": "in-progress",
+        "description": "The one thing that is most important to me: [Placeholder for extracted text from Step 7]."
       }
     }
   ],

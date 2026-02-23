@@ -6,10 +6,11 @@
 ## Asset Descriptions
 
 ### Core Files
-*   **`Stanley-Brown-Safety-Plan-8-6-21.pdf`**: The clinical source of truth.
-*   **`Stanley_Brown_FHIR_Questionnaire.json`**: The primary data entry tool. It uses FHIR groups and items to mirror the 6 steps of the safety plan.
-*   **`Stanley_Brown_Hybrid_CarePlan_Template.json`**: A high-interoperability CarePlan model that embeds critical safety text directly in the activity descriptions.
-*   **`Stanley_Brown_NY_CCBHC_Dashboard_DataDictionary_v3.xlsx`**: Mapping between the clinical fields and the dashboard/EHR reporting requirements.
+*   **`Stanley-Brown-Safety-Plan-8-6-21.pdf`**: The clinical source of truth (located in `references/original-forms/`).
+*   **`Stanley_Brown_FHIR_Questionnaire.json`**: The primary data entry tool. It uses FHIR groups and items to mirror the 6 steps of the safety plan (located in `fhir/questionnaires/`).
+*   **`Stanley_Brown_Hybrid_CarePlan_Template.json`**: A high-interoperability CarePlan model that embeds critical safety text directly in the activity descriptions (located in `fhir/careplans/`).
+*   **`data-mapping.md`**: The definitive guide for how to extract Questionnaire data into the CarePlan (located in `docs/`).
+*   **`Stanley_Brown_NY_CCBHC_Dashboard_DataDictionary_v3.xlsx`**: Mapping between the clinical fields and the dashboard/EHR reporting requirements (located in `references/specs/`).
 
 ### Under Development (`Not ready/`)
 *   **`Stanley Brown Structure Map.json`**: A FHIR Mapping Language (FML) file intended to automate the conversion from the QuestionnaireResponse to a CarePlan. 

@@ -6,4 +6,5 @@
 *   [Validation Guide](best-practices/validation-guide.md): Instructions for validating assets.
 
 ## Clinical Frameworks
-*   **CAMS**: [Data Flow & Architecture](clinical-frameworks/cams/data-flow.md)
+*   **CAMS**: [Data Flow & Architecture](../CAMS/README.md)
+*   **Stanley-Brown Safety Plan**: [Implementation Guide](../Stanley Brown Safety Plan/README.md)

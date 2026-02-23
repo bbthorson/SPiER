@@ -18,7 +18,7 @@
 ## Implementation Notes
 *   **Persistence:** The `CarePlan` is the recommended resource for storing the active safety plan in the EHR.
 *   **Interoperability:** This plan aims to be compliant with the **US Core** and **HL7 eCarePlan** implementation guides.
-*   **Consent:** Sharing this plan across settings requires a valid `Consent` resource (see `STRATEGY_CONSENT.md` in the root directory).
+*   **Consent:** Sharing this plan across settings requires a valid `Consent` resource (see `../../docs/best-practices/strategy-consent.md`).
 
 ## Clinical Mapping Audit Table (LOINC)
 The following LOINC codes have been mapped to the Questionnaire steps for semantic interoperability:

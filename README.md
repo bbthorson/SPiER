@@ -5,13 +5,15 @@ The SPiER project is a non-profit initiative dedicated to translating research-v
 
 ## Repository Structure
 
-*   **`src/`**: Computer-readable assets (FHIR Questionnaires, CarePlans).
-    *   `src/fhir/questionnaires/`: FHIR Questionnaire resources.
-    *   `src/fhir/careplans/`: FHIR CarePlan and protocol definitions.
-*   **`docs/`**: Human-readable documentation.
+The repository is organized by clinical framework to keep all related assets grouped together:
+
+*   **`CAMS/`**: 
+    *   `fhir/`: FHIR resources (Questionnaires, CarePlans).
+    *   `docs/`: Implementation documentation (Data flows, mappings).
+    *   `references/`: Original PDFs and spreadsheets.
+*   **`Stanley Brown Safety Plan/`**: Same sub-directory structure for the Stanley-Brown framework.
+*   **`docs/`**: Global, human-readable documentation.
     *   `docs/best-practices/`: Implementation guides and strategy documents.
-    *   `docs/clinical-frameworks/`: Deep dives into specific tools like CAMS.
-*   **`references/`**: Original source materials (PDFs, Excel specs).
 
 ## Getting Started
 

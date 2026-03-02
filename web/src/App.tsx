@@ -21,6 +21,11 @@ function QuestionnaireView({ title, questionnaire }: { title: string, questionna
 
   return (
     <div className="form-wrapper">
+      <nav className="breadcrumb" aria-label="Breadcrumb">
+        <Link to="/">← Back to Tools</Link>
+        <span className="breadcrumb-sep">/</span>
+        <span className="breadcrumb-current">{title}</span>
+      </nav>
       <div className="form-card">
         <h2>{title}</h2>
         <Renderer
@@ -42,7 +47,7 @@ function QuestionnaireView({ title, questionnaire }: { title: string, questionna
   )
 }
 
-function Navigation() {
+function Navigation({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) {
   const location = useLocation();
   const currentPath = location.pathname;
 
@@ -51,32 +56,49 @@ function Navigation() {
     { path: "/questionnaire/stanley-and-brown", label: "Stanley-Brown Safety Plan" },
     { path: "/questionnaire/cams-section-a", label: "CAMS: Section A" },
     { path: "/questionnaire/cams-section-b", label: "CAMS: Section B" },
-    { path: "/questionnaire/cams-stabilization-plan", label: "CAMS: Stabilization Plan" },
-    { path: "/questionnaire/cams-therapeutic-worksheet", label: "CAMS: Therapeutic Worksheet" },
+    { path: "/questionnaire/cams-stabilization-plan", label: "Stabilization Plan" },
+    { path: "/questionnaire/cams-therapeutic-worksheet", label: "Therapeutic Worksheet" },
   ];
 
   return (
-    <nav className="app-nav">
-      {links.map((link) => (
-        <Link
-          key={link.path}
-          to={link.path}
-          className={`nav-link ${currentPath === link.path ? 'active' : ''}`}
-        >
-          {link.label}
-        </Link>
-      ))}
-    </nav>
+    <>
+      {isOpen && <div className="nav-overlay" onClick={onClose} />}
+      <nav className={`app-nav ${isOpen ? 'app-nav--open' : ''}`}>
+        {links.map((link) => (
+          <Link
+            key={link.path}
+            to={link.path}
+            className={`nav-link ${currentPath === link.path ? 'active' : ''}`}
+            onClick={onClose}
+          >
+            {link.label}
+          </Link>
+        ))}
+      </nav>
+    </>
   );
 }
 
 function App() {
+  const [navOpen, setNavOpen] = useState(false)
+
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1>SPiER Clinical Diagnostics Viewer</h1>
-        <p>Rendering native FHIR Questionnaires using formbox-renderer</p>
-        <Navigation />
+        <div className="header-content">
+          <Link to="/" className="header-brand">
+            <h1>SPiER Clinical Diagnostics</h1>
+          </Link>
+          <button
+            className="nav-toggle"
+            onClick={() => setNavOpen(!navOpen)}
+            aria-label={navOpen ? 'Close navigation' : 'Open navigation'}
+            aria-expanded={navOpen}
+          >
+            <span className={`hamburger ${navOpen ? 'hamburger--active' : ''}`} />
+          </button>
+        </div>
+        <Navigation isOpen={navOpen} onClose={() => setNavOpen(false)} />
       </header>
 
       <main>
@@ -103,6 +125,15 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
+
+      <footer className="app-footer">
+        <div className="footer-content">
+          <p className="footer-tech">
+            Rendering native FHIR Questionnaires using <a href="https://www.npmjs.com/package/@formbox/renderer" target="_blank" rel="noopener noreferrer">formbox-renderer</a>
+          </p>
+          <p className="footer-copy">SPiER &mdash; Setting priorities for technology-enabled suicide-safer care</p>
+        </div>
+      </footer>
     </div>
   )
 }

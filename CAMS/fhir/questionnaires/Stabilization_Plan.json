@@ -21,6 +21,9 @@
           "type": "string",
           "repeats": true,
           "extension": [
+            { "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs", "valueInteger": 1 }
+          ],
+          "extension": [
             { "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs", "valueInteger": 3 }
           ]
         }
@@ -36,6 +39,9 @@
           "text": "Coping strategies:",
           "type": "string",
           "repeats": true,
+          "extension": [
+            { "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs", "valueInteger": 1 }
+          ],
           "extension": [
             { "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs", "valueInteger": 5 }
           ]
@@ -58,6 +64,9 @@
           "type": "string",
           "repeats": true,
           "extension": [
+            { "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs", "valueInteger": 1 }
+          ],
+          "extension": [
             { "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs", "valueInteger": 3 }
           ]
         }
@@ -73,6 +82,9 @@
           "text": "Potential Barrier and Solutions",
           "type": "group",
           "repeats": true,
+          "extension": [
+            { "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs", "valueInteger": 1 }
+          ],
           "item": [
             { "linkId": "barrier", "text": "Potential Barrier:", "type": "string" },
             { "linkId": "solution", "text": "Solutions I will try:", "type": "string" }

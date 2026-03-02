@@ -179,6 +179,9 @@
           "text": "Reasons for Living (Rank 1-5)",
           "type": "group",
           "repeats": true,
+          "extension": [
+            { "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs", "valueInteger": 1 }
+          ],
           "item": [
             {
               "linkId": "living-rank",
@@ -197,6 +200,9 @@
           "text": "Reasons for Dying (Rank 1-5)",
           "type": "group",
           "repeats": true,
+          "extension": [
+            { "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs", "valueInteger": 1 }
+          ],
           "item": [
             {
               "linkId": "dying-rank",

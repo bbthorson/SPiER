@@ -1,31 +1,48 @@
-/* App.css */
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  /* Replicate the presentation gradient (cyan top-right, peach bottom-left) */
+  background: linear-gradient(135deg, #e0f2fe 0%, #ffffff 50%, #ffedd5 100%);
+  background-attachment: fixed;
+}
+
 #root {
-  max-width: 1280px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: left;
+  width: 100%;
 }
 
 .app-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  min-height: 100vh;
 }
 
 .app-header {
-  border-bottom: 1px solid #e2e8f0;
-  padding-bottom: 1rem;
+  background-color: #2b1424;
+  /* Dark plum */
+  color: white;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  margin-bottom: 2rem;
 }
 
 .app-header h1 {
   margin: 0 0 0.5rem 0;
-  font-size: 2rem;
-  color: #1e293b;
+  font-size: 2.5rem;
+  /* Larger font */
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .app-header p {
-  margin: 0 0 1rem 0;
-  color: #64748b;
+  margin: 0 0 1.5rem 0;
+  color: #cbd5e1;
+  font-size: 1.1rem;
 }
 
 .app-nav {
@@ -37,20 +54,26 @@
 .nav-link {
   text-decoration: none;
   font-weight: 500;
-  color: #0ea5e9;
+  color: white;
   padding: 0.5rem 1rem;
   border-radius: 4px;
-  background: #f0f9ff;
+  background: rgba(255, 255, 255, 0.1);
   transition: all 0.2s;
 }
 
 .nav-link:hover {
-  background: #e0f2fe;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .nav-link.active {
-  background: #0ea5e9;
+  background: #d16b47;
+  /* Burnt orange accent */
   color: white;
+}
+
+main {
+  padding: 0 2rem 2rem 2rem;
+  flex-grow: 1;
 }
 
 .form-wrapper {

@@ -14,6 +14,7 @@ import camsStabilizationPlan from '../../CAMS/fhir/questionnaires/Stabilization_
 import camsTherapeuticWorksheet from '../../CAMS/fhir/questionnaires/Therapeutic_Worksheet.json'
 
 import { Link, useLocation } from 'react-router-dom'
+import { Home } from './Home'
 
 function QuestionnaireView({ title, questionnaire }: { title: string, questionnaire: any }) {
   const [response, setResponse] = useState<any>(null)
@@ -46,9 +47,10 @@ function Navigation() {
   const currentPath = location.pathname;
 
   const links = [
+    { path: "/", label: "Home" },
     { path: "/questionnaire/stanley-and-brown", label: "Stanley-Brown Safety Plan" },
-    { path: "/questionnaire/cams-section-a", label: "CAMS: Section A (Patient)" },
-    { path: "/questionnaire/cams-section-b", label: "CAMS: Section B (Clinician)" },
+    { path: "/questionnaire/cams-section-a", label: "CAMS: Section A" },
+    { path: "/questionnaire/cams-section-b", label: "CAMS: Section B" },
     { path: "/questionnaire/cams-stabilization-plan", label: "CAMS: Stabilization Plan" },
     { path: "/questionnaire/cams-therapeutic-worksheet", label: "CAMS: Therapeutic Worksheet" },
   ];
@@ -79,6 +81,7 @@ function App() {
 
       <main>
         <Routes>
+          <Route path="/" element={<Home />} />
           {/* Main Routing for forms */}
           <Route path="/questionnaire/stanley-and-brown" element={
             <QuestionnaireView title="Stanley-Brown Safety Plan" questionnaire={stanleyBrownQuestionnaire} />
@@ -97,7 +100,7 @@ function App() {
           } />
 
           {/* Default fallback */}
-          <Route path="*" element={<Navigate to="/questionnaire/stanley-and-brown" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
     </div>

@@ -1,0 +1,118 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-section {
+    text-align: left;
+    padding: 2rem 0;
+}
+
+.spier-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2b1424;
+    /* Dark plum from presentation */
+    margin: 0 0 0.5rem 0;
+}
+
+.accent-line {
+    height: 6px;
+    background-color: #d16b47;
+    /* Burnt orange from presentation */
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 1.5rem;
+}
+
+.spier-subtitle {
+    font-size: 1.5rem;
+    color: #2b1424;
+    margin: 0 0 1rem 0;
+}
+
+.spier-description {
+    font-size: 1.1rem;
+    color: #475569;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .tools-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.tool-card {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.tool-card h3 {
+    color: #2b1424;
+    margin-top: 0;
+    font-size: 1.25rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+}
+
+.tool-card p {
+    color: #475569;
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #2b1424;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #4a2840;
+}
+
+.cams-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: #f1f5f9;
+    color: #2b1424;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    text-align: left;
+    border: 1px solid #cbd5e1;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: #e2e8f0;
+    border-color: #94a3b8;
+}

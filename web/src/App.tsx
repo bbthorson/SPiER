@@ -24,7 +24,7 @@ function QuestionnaireView({ title, questionnaire }: { title: string, questionna
       <div className="form-card">
         <h2>{title}</h2>
         <Renderer
-          fhirVersion="r5"
+          fhirVersion="r4"
           questionnaire={questionnaire}
           theme={theme}
           /* @ts-ignore - The formbox types are slightly outdated compared to the actual library props */

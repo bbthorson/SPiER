@@ -250,11 +250,7 @@ main {
   padding: 2rem;
 }
 
-.form-card h2 {
-  margin: 0 0 1.5rem 0;
-  color: #2b1424;
-  font-size: 1.5rem;
-}
+
 
 .debug-sidebar {
   flex: 0 0 380px;
@@ -339,4 +335,87 @@ main {
     flex-direction: column;
     text-align: center;
   }
+}
+
+/* ===========================
+   Formbox Button Overrides
+   =========================== */
+
+/* Submit button — brand purple */
+.form-card .pon106y.b1fzc7cb {
+  background: #2b1424;
+  color: #fff;
+  border-color: #2b1424;
+  border-radius: 8px;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.9375rem;
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+.form-card .pon106y.b1fzc7cb:hover {
+  background: #4a2840;
+  border-color: #4a2840;
+  transform: translateY(-1px);
+}
+
+/* Cancel / secondary button — outlined neutral */
+.form-card .s7gz39z.b1fzc7cb {
+  background: #f8fafc;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.9375rem;
+  transition: all 0.2s;
+}
+
+.form-card .s7gz39z.b1fzc7cb:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+  color: #2b1424;
+}
+
+/* Add (+) buttons — brand tint */
+.form-card .b1xzeqmh {
+  background: #f5f0f4;
+  border-color: #d4c0cf;
+  color: #2b1424;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.form-card .b1xzeqmh:hover {
+  background: #ebe1e8;
+  border-color: #b89aaf;
+}
+
+/* Generic action buttons inside forms */
+.form-card .nm2d3cn {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  color: #475569;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.form-card .nm2d3cn:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+/* Focus ring consistency */
+.form-card .pon106y.b1fzc7cb:focus-visible,
+.form-card .s7gz39z.b1fzc7cb:focus-visible,
+.form-card .b1xzeqmh:focus-visible,
+.form-card .nm2d3cn:focus-visible {
+  outline: 2px solid #d16b47;
+  outline-offset: 2px;
+}
+
+/* Form title from renderer — style to match app */
+.form-card .t1n83i42 {
+  color: #2b1424;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
 }
